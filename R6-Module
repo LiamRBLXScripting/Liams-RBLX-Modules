@@ -18,4 +18,11 @@ end
 function rig.c1(str, cframe)
     JointR6LIST[str].C1 = cframe
 end
+function rig.deathlessdetach(str)
+    local con = Instance.new("NoCollisionConstraint", JointR6LIST[str].Parent)
+    con.Part0 = JointR6LIST[str].Part0
+    con.Part1 = JointR6LIST[str].Part1
+    con.Name = JointR6LIST[str].Name
+    JointR6LIST[str]:Destroy()
+end
 return rig

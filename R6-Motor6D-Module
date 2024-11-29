@@ -1,4 +1,6 @@
-local motor = {}
+local r6 = {}
+local plr = game.Players.LocalPlayer
+local char = plr.Character
 local JointR6LIST= {
     ["LS"] = char.Torso["Left Shoulder"],
     ["RS"] = char.Torso["Right Shoulder"],
@@ -7,12 +9,12 @@ local JointR6LIST= {
     ["N"] = char.Torso["Neck"],
     ["RJ"] = char.HumanoidRootPart["RootJoint"]
 }
-function motor.joint(str)
+function r6.joint(str)
     return JointR6LIST[str]
 end
-function motor.c0(str, cframe)
+function r6.c0(str, cframe)
     JointR6LIST[str].C0 = cframe
 end
-function motor.c1(str, cframe)
+function r6.c1(str, cframe)
     JointR6LIST[str].C1 = cframe
 end

@@ -1,1 +1,18 @@
-
+local motor = {}
+local JointR6LIST= {
+    ["LS"] = char.Torso["Left Shoulder"],
+    ["RS"] = char.Torso["Right Shoulder"],
+    ["LH"] = char.Torso["Left Hip"],
+    ["RH"] = char.Torso["Right Hip"],
+    ["N"] = char.Torso["Neck"],
+    ["RJ"] = char.HumanoidRootPart["RootJoint"]
+}
+function motor.joint(str)
+    return JointR6LIST[str]
+end
+function motor.c0(str, cframe)
+    JointR6LIST[str].C0 = cframe
+end
+function motor.c1(str, cframe)
+    JointR6LIST[str].C1 = cframe
+end

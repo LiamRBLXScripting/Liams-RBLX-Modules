@@ -1,4 +1,4 @@
-local r6 = {}
+local rig = {}
 local plr = game.Players.LocalPlayer
 local char = plr.Character
 local JointR6LIST= {
@@ -9,12 +9,12 @@ local JointR6LIST= {
     ["N"] = char.Torso["Neck"],
     ["RJ"] = char.HumanoidRootPart["RootJoint"]
 }
-function r6.joint(str)
+function rig.joint(str)
     return JointR6LIST[str]
 end
-function r6.c0(str, cframe)
+function rig.c0(str, cframe)
     JointR6LIST[str].C0 = cframe
 end
-function r6.c1(str, cframe)
+function rig.c1(str, cframe)
     JointR6LIST[str].C1 = cframe
 end

@@ -18,3 +18,4 @@ end
 function rig.c1(str, cframe)
     JointR6LIST[str].C1 = cframe
 end
+return rig
